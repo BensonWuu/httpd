@@ -75,4 +75,7 @@ RUN set -x \
 	\
 	&& apt-get purge -y --auto-remove $buildDeps
 
+COPY httpd-foreground /usr/local/bin/
+
 EXPOSE 80
+CMD ["httpd-foreground"]
